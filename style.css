@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Nunito';
+    font-size: 20px;
+}
+section {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(25, 25, 34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: rgb(59, 58, 58);
+    padding: 50px 30px 30px 30px;
+    width: 90%;
+    min-height: 500px;
+    max-width: 600px;
+    border-radius: 8px;
+    color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+}
+.container .scoreBoard{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+form h1 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+form .option{
+    font-size: 1.2rem;
+    margin: 10px 0px 0px 10px;
+    padding: 10px;
+    transition: .5s ease background-color;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+} 
+form .option label{
+    width: 100%;
+    margin-left: 10px;
+    cursor: pointer;
+    justify-self: stretch;
+}
+form .option:hover{
+    background-color: rgb(114, 109, 117);
+}
+form .option input[type='radio']:checked + label{
+    color: rgb(19, 168, 228);
+}
+form button , 
+.container .result-overlay button {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-family: 'Nunito';
+    cursor: pointer;
+    background-color: dimgray;
+    border-radius: 6px;
+    color: rgb(13, 13, 19);
+    border: none;
+    transition: .2s ease background-color;
+
+}
+button:hover,
+.container .result-overlay button{
+    background-color: burlywood;
+}
+form .option.correct{
+    background-color: green;
+}
+.finish-btn, .next-btn{
+    width: 50%;
+    display: inline-block;
+
+}
+.finish-btn{
+    border-right: 1px solid black;
+}
+.next-btn{
+    border-left: 1px solid black;
+}
+.container .result-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:lightsteelblue ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container .result-overlay .finish-result{
+    font-size: 5rem;
+}
+.container .placeholder{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(59, 58, 58);
+    background-image: url(Quiz-Dwight.jpg);
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+
+@media (max-width:768px) {
+    html{
+        font-size: 17px;
+    }
+    .container form h1{
+        font-size: 1.5rem;
+    }
+}
